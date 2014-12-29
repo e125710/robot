@@ -20,6 +20,12 @@ App::App()
 {
 }
 
+//追加した、
+void moveChildFrame(FrameRef src,FrameRef dst,FrameRef child){
+    dst->addChild(child);
+    src->removeChild(child);
+}
+
 void App::init()
 {
     //背景クリア色
@@ -28,7 +34,7 @@ void App::init()
     RGE::getInstance()->init();
     
     RgeReader reader;
-    reader.read("sampleModels/robot.rge");
+    reader.read("/Users/e125710/Desktop/3rdG/AR/blend/small_person_oriru.rge");
     
     if(RGE::getInstance()->findFrame("Armature"))
         RGE::getInstance()->findFrame("Armature")->setBonesVisibility(false);
@@ -40,15 +46,29 @@ void App::init()
     
     RGE::getInstance()->setBackgroundColor(color3(0,0,1));
     //RGE::getInstance()->rootFrame()->stopAnimation();
-    RGE::getInstance()->rootFrame()->anim()->setLooping(true, true);
+    RGE::getInstance()->rootFrame()->anim()->setLooping(false, true);
     
     //LAYER_2に属するオブジェクトを描画しない
     RGE::getInstance()->setLayerVisibility(LAYER_2, false);
     
+    kobitoBase = RGE::getInstance()->rootFrame()->createChild();//
+    kobitoJumpFrame = RGE::getInstance()->rootFrame()->createChild();
     
-    robotBase = RGE::getInstance()->findFrame("walk");
+    FrameRef root = RGE::getInstance()->rootFrame();//
+    
+    moveChildFrame(root,kobitoBase ,RGE::getInstance()->findFrame("Head"));//
+    moveChildFrame(root,kobitoBase ,RGE::getInstance()->findFrame("body"));//
+    moveChildFrame(root,kobitoBase ,RGE::getInstance()->findFrame("leftHand"));//
+    
+    //moveChildFrame(root,kobitoJumpFrame ,RGE::getInstance()->findFrame("head"));//
+    //moveChildFrame(root,kobitoJumpFrame ,RGE::getInstance()->findFrame("body.001"));//
 
+    //kobitoJumpFrame->setVelocity(rgeVector3(1,0,0));
     
+    //FrameRef kobito = RGE::getInstance()->findFrame("Head");
+    //RGE::getInstance()->rootFrame()->removeChild(kobito);
+
+    //kobitoBase->addChild(kobito);
 }
 
 void App::applyWindowSize(int w, int h)
@@ -69,9 +89,9 @@ void App::update()
     RGE::getInstance()->update();
     
     //setVelocityは移動速度,1秒毎にどれだけ進むか
-    robotBase->setVelocity(0, 0, 1);
+    kobitoBase->setVelocity(0, 0, 1);
     //rotateは回転を指定
-    robotBase->rotate(0,0,1);
+    kobitoBase->rotate(0,0,1);
 
 }
 
