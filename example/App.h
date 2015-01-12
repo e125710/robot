@@ -24,7 +24,8 @@ public:
     void mouseLeftReleased(int x, int y);
     void mouseLeftDragged(int x, int y);
 private:
-    rge::FrameRef robotBase;
+    rge::FrameRef workHiyokoFrame;
+    rge::FrameRef jumpHiyokoFrame;
     
 };
 
