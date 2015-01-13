@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8182E46F-D4EE-4E18-A665-3942B00AE55A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rge_sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0DB03874DDFF477E258B65BA6B15FE8B9C8BBBA9</key>
+		<string>https://github.com/e125710/robot.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xcode/rge_sample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0DB03874DDFF477E258B65BA6B15FE8B9C8BBBA9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/e125710/robot.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0DB03874DDFF477E258B65BA6B15FE8B9C8BBBA9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0DB03874DDFF477E258B65BA6B15FE8B9C8BBBA9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>robot</string>
+		</dict>
+	</array>
+</dict>
+</plist>
